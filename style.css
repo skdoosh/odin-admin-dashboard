@@ -1,11 +1,23 @@
+/* font */
+@font-face {
+    font-family: 'noto';
+    src: url('./assets/fonts/noto/notosans-variablefont_wdthwght-webfont.woff2') format('woff2'),
+         url('./assets/fonts/noto/notosans-variablefont_wdthwght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 /* Minimal CSS reset from Digital Ocean */
 html {
   box-sizing: border-box;
   font-size: 16px;
+  font-family: "noto";
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
+  font-family: inherit;
 }
 
 body, h1, h2, h3, h4, h5, h6, p, ol, ul {
@@ -27,12 +39,22 @@ body{
   display: grid;
   height: 100vh;
   width: 100vw;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 1.25fr 5fr;
   grid-template-rows: 1fr 5fr;
   grid-template-areas: 
     "sidebar header"
     "sidebar main-content"
 }
+
+a {
+  text-decoration: none;  /* Removes underline */
+  color: inherit;         /* Makes link color match surrounding text */
+  background: none;       /* Remove highlight if browser applies it */
+  font: inherit;          /* Inherit font settings */
+  cursor: inherit;        /* If you don’t want a pointer cursor */
+  outline: none;          /* Optional: remove focus outline */
+}
+
 
 /* Header */
 .header{
@@ -42,6 +64,59 @@ body{
 /* Sidebar */
 .sidebar {
   grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  background-color: #3382d5;
+  gap: 2em;
+  align-items: flex-start;
+  padding: 30px;
+}
+
+.utility-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+}
+
+.navigation-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+}
+
+.sidebar-links.main {
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+
+}
+
+.svg-box {
+  display: flex;
+  place-items: center;
+  place-content: center;
+  height: 40px;
+  width: 40px;
+  margin-right: 15px;
+}
+
+.sidebar-links.main>.svg-box>svg {
+  height: 1.5em;
+  width: 1.5em;
+}
+
+.sidebar-links {
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-links>.svg-box>svg {
+  height: 1em;
+  width: 1em;
 }
 
 /* Main Content */
