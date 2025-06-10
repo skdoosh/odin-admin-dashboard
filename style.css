@@ -1,3 +1,4 @@
+/* Minimal CSS reset from Digital Ocean */
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -20,4 +21,30 @@ ol, ul {
 img {
   max-width: 100%;
   height: auto;
+}
+
+body{
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 5fr;
+  grid-template-areas: 
+    "sidebar header"
+    "sidebar main-content"
+}
+
+/* Header */
+.header{
+  grid-area: header;
+}
+
+/* Sidebar */
+.sidebar {
+  grid-area: sidebar;
+}
+
+/* Main Content */
+.main-content {
+  grid-area: main-content;
 }
