@@ -342,8 +342,27 @@ p.heading {
   background-color: #fff;
   border-radius: 10px;
   padding: 2em;
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
+
+.announcement {
+  font-weight: bolder;
+  line-height: 2em;
+}
+
+.announcement-content {
+  color: #888888;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: #ccc;
+  margin: 2rem 0;
+}
+
 
 .trending {
   grid-area: trending;
