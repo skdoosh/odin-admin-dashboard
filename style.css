@@ -69,9 +69,11 @@ button, input[type="submit"], input[type="reset"] {
 .header{
   grid-area: header;
   display: grid;
+  padding: 1em;
   grid-template-rows: 1fr 1fr;
   grid-template-areas:"top" "bottom";
   grid-template-columns: 1fr;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
 .top {
@@ -138,10 +140,65 @@ form.search {
   font-weight: bold;
 }
 
-
+/* .bottom>*{
+  border: 2px solid blue;
+}
+.bottom>*>* {
+  border: 2px solid black;
+} */
 
 .bottom {
   grid-area: bottom;
+  display: flex;
+}
+
+.greeting {
+  display: flex;
+  gap: 2em;
+  padding-left: 2em; 
+}
+
+.greeting-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.greeting-text>p {
+  font-weight: bold;
+}
+
+.greeting-text>p.user {
+  font-size: x-large;
+}
+
+.greeting-pic>svg {
+  width: 80px;
+  height: 80px;
+  background-color: #fff;       /* or any background */
+  border-radius: 50%;           /* makes it circular */
+  display: flex;                /* centers the svg */
+  align-items: center;
+  justify-content: center;
+}
+
+.quick-actions{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2em;
+  padding-right: 2em;
+  font-weight: bold;
+  flex: 1;
+}
+
+.quick-actions>button {
+  background-color: #3382d5;
+  font-size: 16px;
+  height: 2.5em;
+  color: white;
+  border-radius: 1.75em;
+  width: 6em;
 }
 
 /* Sidebar */
@@ -176,7 +233,7 @@ form.search {
 }
 
 .svg-box {
-  display: flex;
+  display: flex ;
   place-items: center;
   place-content: center;
   height: 40px;
