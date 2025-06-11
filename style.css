@@ -38,7 +38,7 @@ img {
 body{
   display: grid;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   grid-template-columns: 1.25fr 5fr;
   grid-template-rows: 1fr 5fr;
   grid-template-areas: 
@@ -262,4 +262,89 @@ form.search {
 /* Main Content */
 .main-content {
   grid-area: main-content;
+  background-color: #e2e6f0;
+  display: grid;
+  grid-template-columns: 11fr 4fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "projects announcements" "projects trending";
+  padding: 2em;
+  gap: 1em;
+}
+
+.projects{
+  grid-area: projects;
+  display: flex;
+  flex-direction: column;
+
+}
+
+p.heading {
+  font-size: larger;
+  font-weight: bold;
+  padding-bottom: 0.5em;
+}
+
+.project-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1em;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 2em;
+  border-radius: 10px;
+  border-left: 10px solid #1e3e5e;
+  flex: 1;
+}
+
+.card-content{
+  color: #888888;
+  font-size: 18px;
+  line-height: 1.5em;
+}
+
+.card-heading {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.5em;
+}
+
+.project-options-container {
+  display: flex;
+  align-self: flex-end;
+  justify-self: flex-end;
+  place-self: flex-end;
+  margin-top: auto;
+}
+
+.project-options-container>.svg-box>svg{
+  fill  : #444444;
+  height: 1.5em;
+  width: 1.5em;
+  
+}
+
+.announcements {
+  grid-area: announcements;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.announcements-container {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2em;
+  
+}
+
+.trending {
+  grid-area: trending;
 }
