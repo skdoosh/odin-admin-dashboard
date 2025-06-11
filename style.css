@@ -51,14 +51,97 @@ a {
   color: inherit;         /* Makes link color match surrounding text */
   background: none;       /* Remove highlight if browser applies it */
   font: inherit;          /* Inherit font settings */
-  cursor: inherit;        /* If you don’t want a pointer cursor */
+  /* cursor: inherit;        If you don’t want a pointer cursor */
   outline: none;          /* Optional: remove focus outline */
 }
 
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
 
 /* Header */
 .header{
   grid-area: header;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:"top" "bottom";
+  grid-template-columns: 1fr;
+}
+
+.top {
+  grid-area: top;
+  display: flex;
+  /* border: 2px solid black; */
+}
+
+div.search {
+  /* border: 2px solid blue; */
+  display: flex;
+  padding-left: 2em;
+}
+
+.search>button>svg {
+  height: 1.5em;
+  width: 1.5em;
+}
+
+form.search {
+  /* border: 2px solid green; */
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.search>input {
+  border-radius: 1em;
+  height: 2em;
+  width: 50em;
+  border: none;
+  outline: none;
+  background-color: #e2e6f0;
+}
+
+.profile {
+  /* border: 2px solid pink; */
+  display: flex;
+  justify-content: flex-end;
+  gap: 1em;
+  align-items: center;
+  flex: 1;
+  padding-right: 2em;
+}
+
+.notification-icon {
+  height: 1.5em;
+  width: 1.5em;
+}
+
+.profile-pic>svg {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;       /* or any background */
+  border-radius: 50%;           /* makes it circular */
+  display: flex;                /* centers the svg */
+  align-items: center;
+  justify-content: center;
+  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); optional shadow */
+}
+
+.profile>.username {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+
+.bottom {
+  grid-area: bottom;
 }
 
 /* Sidebar */
