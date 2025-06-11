@@ -300,6 +300,8 @@ p.heading {
   border-radius: 10px;
   border-left: 10px solid #1e3e5e;
   flex: 1;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+
 }
 
 .card-content{
@@ -345,6 +347,8 @@ p.heading {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+
 }
 
 .announcement {
@@ -379,6 +383,8 @@ hr {
   border-radius: 10px;
   padding: 2em;
   gap: 1em;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+
 
 }
 
